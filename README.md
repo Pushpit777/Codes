@@ -1,8 +1,4 @@
-# Demo
-This is my First Github Repository.
-<br>
-Author - Pushpit saini
-<br>
+# Solve any Quadratic equation
 Code to solve any quadratic equation in java
 <br>
     int a = 2;
