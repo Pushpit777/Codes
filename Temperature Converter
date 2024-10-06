@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class Temperature {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the temperature: ");
+        double temp = scanner.nextDouble();
+
+        System.out.print("Enter the unit of your temperature (c for celsius and f for farenheit and k for kelvin): ");
+        char degree = scanner.next().charAt(0);
+
+        System.out.print("Enter the unit you want to change to: ");
+        char degree_2 = scanner.next().charAt(0);
+
+        if(degree == 'c' && degree_2 == 'f')
+        {
+            System.out.print((temp * 1.8) + 32 );
+            System.out.print(" F");
+        }
+        else if(degree == 'c' && degree_2 == 'k')
+        {
+            System.out.print(temp + 273.15 );
+            System.out.print(" K");
+        }
+
+        else if(degree == 'f' && degree_2 == 'c')
+        {
+            System.out.print((temp - 32) * 5 / 9 );
+            System.out.print(" C");
+        }
+        else if(degree == 'f' && degree_2 == 'k')
+        {
+            System.out.print(((temp - 32) * 5 / 9) + 273.15);
+            System.out.print(" K");
+        }
+
+        else if(degree == 'k' && degree_2 == 'c')
+        {
+            System.out.print(temp - 273.15);
+            System.out.print(" C");
+        }
+        else if(degree == 'k' && degree_2 == 'f')
+        {
+            System.out.print((temp - 273.15) * 1.8 + 32);
+            System.out.print(" F");
+        }
+        
+        else
+        {
+            System.out.println("Kindly type the right value. ");
+        }
+    }  
+}
